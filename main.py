@@ -1,11 +1,7 @@
-mark=int(input("Enter your mark?"))
-if mark>=90:
-    print("You got A+")
-elif mark>=80:
-    print("You got A")
-elif mark>=70:
-    print("You got B+")
-elif mark>=60:
-    print("You got B")
-else:
-    print("Try Again")
+def area(num):
+    return num*num
+x=area(5)
+y=area(6)
+print(x)
+print(y)
+print("the sum of two area is:",x+y)
