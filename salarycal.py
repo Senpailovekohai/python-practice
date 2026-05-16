@@ -10,12 +10,12 @@ if hour>200:
 
 if years>4.5:
     pay=pay+10000
-    print("Your salary with beneift of years ",pay)
+    print("Your salary with experience beneift  ",pay)
 
-if pay>50000:
+if pay>300000:
     pay=pay-0.10*pay
 else:
-    pay=pay-0.05*pay
+    pay=pay-0.033*pay
 
 print("Your final monthly salary after tax deduction is:",pay)
 
