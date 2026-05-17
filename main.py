@@ -1,7 +1,10 @@
-def area(num):
-    return num*num
-x=area(5)
-y=area(6)
-print(x)
-print(y)
-print("the sum of two area is:",x+y)
+bio={
+    "name":"Rahul",
+    "age":24,
+    "Major":"computer science",
+    "hobby":"gym,playing guitar",
+    "favsport":"Basketball,football",
+    "favsinger":"J.cole"
+}
+for key in bio:
+    print(key,":",bio[key])
