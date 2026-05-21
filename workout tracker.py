@@ -1,3 +1,16 @@
+def show_workout(day_name , workout_list):
+    print(day_name)
+    for workout in workout_list:
+        print(workout["exercise"],
+          "-",
+          workout["sets"],
+          "-sets",
+          workout["reps"],
+          "-reps"
+
+    )
+
+
 day1=[
     {"exercise":"Bench Press","sets":3,"reps":4},
     {"exercise":"Incline Bench Press","sets":3,"reps":4},
@@ -5,16 +18,7 @@ day1=[
     {"exercise":"ropepull down ","sets":3,"reps":4},
     {"exercise":"Overhead tricep pull ","sets":3,"reps":4},
 ]
-print("Day 1: Chest and Triep Split")
-for workout in day1:
-    print(
-        workout["exercise"],
-        "-",
-        workout["sets"],
-        "sets-",
-        workout["reps"],
-        "reps-"
-    )
+
 day2=[
     
     {"exercise":"pull up","sets":3,"reps":4},
@@ -25,17 +29,8 @@ day2=[
     {"exercise":"Hammer Crul","sets":3,"reps":4}
 
 ]
-print("Day-2: Back and Bicep Spilt")
-for workout in day2:
-    print(
-        workout["exercise"],
-        "-",
-        workout["sets"],
-        "sets-",
-        workout["reps"],
-        "reps"
-    )
-print("Day 3: Rest Day")
+
+
 day4=[
     {"exercise":"leg Press","sets":3,"reps":4},
     {"exercise":"Squate","sets":3,"reps":4},
@@ -44,16 +39,7 @@ day4=[
   
     
 ]
-print("Day 4: Leg and Cardio Split")
-for workout in day4:
-    print(
-        workout["exercise"],
-        "-",
-        workout["sets"],
-        "sets-",
-        workout["reps"],
-        "reps-"
-    )
+
 
 day5=[
     {"exercise":"Shoulder Press","sets":3,"reps":4},
@@ -63,14 +49,10 @@ day5=[
     {"exercise":"Crunchs","sets":3,"reps":4}
     
 ]
-print("Day 5: Shoulder and Abs Split")
-for workout in day5:
-    print(
-        workout["exercise"],
-        "-",
-        workout["sets"],
-        "sets-",
-        workout["reps"],
-        "reps-"
-    )
+
+show_workout("Day 1: Cheast and Tricep",day1)
+show_workout("Day2:Back and bicep split",day2)
+print("Day 3: Rest Day")
+show_workout("Day 4: Rest and Recovery Day",day4)
+show_workout("Day 5: Shoulder and Abs",day5)
 print("Rest Day and Repeat Again")
