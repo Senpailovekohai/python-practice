@@ -1,10 +1,6 @@
-bio={
-    "name":"Rahul",
-    "age":24,
-    "Major":"computer science",
-    "hobby":"gym,playing guitar",
-    "favsport":"Basketball,football",
-    "favsinger":"J.cole"
-}
-for key in bio:
-    print(key,":",bio[key])
+import json
+day1=[
+    {"exercise":"Bicep Curls","sets":3,"reps":4}
+]
+with open("workout.json","w") as file:
+    json.dump(day1,file)
