@@ -5,11 +5,22 @@ if os.path.exists("workout.json"):
         day1 = json.load(file)
 else:
     day1=[]
+
 condition="yes"
 while condition == "yes":
         exercise=input("Enter your exercise:")
-        sets=int(input("Enter the number of sets:"))
-        reps=int(input("Enter your number of reps:"))
+        while True:
+            try:
+                sets=int(input("Enter the number of sets:"))
+                break
+            except:
+                print("Only put number")
+        while True:
+            try:
+                reps=int(input("Enter your number of reps:"))
+                break
+            except:
+                print("Only put number")
         workout ={
              "exercise":exercise,
              "sets":sets,
