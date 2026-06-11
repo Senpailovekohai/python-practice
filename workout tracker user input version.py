@@ -14,17 +14,19 @@ while condition == "yes":
                 sets=int(input("Enter the number of sets:"))
                 break
             except:
-                print("Only put number")
+                print("Please only input number")
         while True:
             try:
                 reps=int(input("Enter your number of reps:"))
                 break
             except:
-                print("Only put number")
+                print("Please only put number")
+        day=input("Enter which day is it for?")
         workout ={
              "exercise":exercise,
              "sets":sets,
-             "reps":reps
+             "reps":reps,
+             "day":day
              
         }
  
@@ -33,16 +35,38 @@ while condition == "yes":
         while condition!="yes" and condition!="no":
             print("Please Type Yes/No")
             condition = input("Do you wanna add another?").lower()
+delete=input("Do you want to delete any workout?").lower()
+if delete=="yes":
+    user_input=input("Which exercise you wanna delete?")
+    for workout in day1:
+        if workout["exercise"]==user_input:
+            day1.remove(workout)
+            print("Sucessfully Deleted!!")
+            break
+    else:
+            print("Exercise not found.")
+            
+while delete!="yes" and delete!="no":
+    print("Please enter Yes/No")
+    delete=input("Do you want to delete any workout?").lower()
+days= set()
+for workout in day1:
+    days.add(workout["day"])
+for day in days:
+    print(f"\n---{day}---")
 
-for exercises in day1:
-    print(
-        exercises["exercise"],
-        "-",
-        exercises["sets"],
-        "sets",
-        "-",
-        exercises["reps"],
-        "reps"
-    )
+    for workout in day1:
+       if workout["day"]==day:
+           print(
+               workout["exercise"],
+               "-",
+               workout["sets"],
+               "sets",
+               "-",
+               workout["reps"],
+               "reps"
+
+        )
+
 with open("workout.json","w") as file:
     json.dump(day1, file)

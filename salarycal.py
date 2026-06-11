@@ -13,7 +13,7 @@ if years>4.5:
     print("Your salary with experience beneift  ",pay)
 
 if pay>300000:
-    pay=pay-0.10*pay
+    pay=pay-0.1*pay
 else:
     pay=pay-0.033*pay
 
